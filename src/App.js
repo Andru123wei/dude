@@ -4,11 +4,12 @@ import './App.css';
 function App() {
   return (
     <>
-    <div className=" flex text-9xl">
-      DUDE
-      
+    <div className=" ">
+
+    <img  src={dudeN}/>
+
     </div>
-    <img className=' w-100px h-96' src={dudeN}/>
+    
     
     </>
   );
