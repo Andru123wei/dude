@@ -1,12 +1,19 @@
 import dudeN from './images/dudeN.png';
+import icD from './images/icon.png';
 import './App.css';
 
 function App() {
   return (
     <>
-    <div className=" ">
+    <div className="mega-div">
 
-    <img  src={dudeN}/>
+    <div>
+    <button><img className='icon'  src={icD}/></button>
+    </div>
+
+    <div>
+    <img className='dude' src={dudeN}/>
+    </div>
 
     </div>
     

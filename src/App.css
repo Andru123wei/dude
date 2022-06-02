@@ -5,12 +5,25 @@
 }
 
 body{
+  display: flex;
   background: #f7b731;
   font-family: 'Poppins', sans-serif;
   font-family: 'Public Sans', sans-serif;
   font-family: 'Shadows Into Light', cursive;
+  justify-content: center;
+  align-items: center;
+}
+.mega-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 
+.mega-div button{
+  background-color: transparent;
+  border: none;
+}
 
 
 
