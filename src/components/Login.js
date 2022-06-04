@@ -67,8 +67,8 @@ function Login() {
             }}
             
 
-            className='icon' src={icD} /></button>
-            <img className='dude' src={dudeN} />
+            className='icon'  src={icD} /></button>
+            <img className='dude' alt='dude' src={dudeN} />
         </div>
 
     </div>
