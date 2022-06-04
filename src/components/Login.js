@@ -60,10 +60,12 @@ function Login() {
             <button><img className='icon' src={icD} /></button>
             <img className='dude' src={dudeN} />
         </div>
-
     </div>
     </>
   );
 }
+
+
+  
 
 export default Login;
