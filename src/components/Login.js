@@ -71,10 +71,12 @@ function Login() {
             <img className='dude' src={dudeN} />
         </div>
 
-
     </div>
     </>
   );
 }
+
+
+  
 
 export default Login;
