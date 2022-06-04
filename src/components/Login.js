@@ -2,6 +2,7 @@ import { useState } from 'react';
 import dudeN from '../images/dudeN.png';
 import icD from '../images/icon.png';
 import '../styles/login.css';
+import { motion } from 'framer-motion'
 
 function Login() {
 
@@ -57,12 +58,17 @@ function Login() {
         </div>
 
         <div className="mega-div">
-            <button><img className='icon' src={icD} /></button>
-            <img className='dude' src={dudeN} />
-        </div>
+            <button><motion.img 
+            animate={{ rotate: 40 }}
+            transition={{ 
+                duration: 0.4,
+                repeat : 10,
+                repeatType: "reverse" 
+            }}
+            
 
-        <div>
-            <label>primer cambio</label>
+            className='icon' src={icD} /></button>
+            <img className='dude' src={dudeN} />
         </div>
 
     </div>
