@@ -7,7 +7,6 @@ import { motion } from 'framer-motion'
 function Login() {
 
     const [value, setValue] = useState({
-        email: '',
         username: '',
         password: '',
     });
@@ -22,7 +21,7 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(`enviando datos... ${value.email}, ${value.username}, ${value.password}`)
+        console.log(`enviando datos... ${value.username}, ${value.password}`)
     }
 
   return (
@@ -31,12 +30,7 @@ function Login() {
 
         <div className="signupFrm">
             <form className="form" onSubmit={handleSubmit}>
-                <h1 className="title">Sign up</h1>
-
-                <div className="inputContainer">
-                    <input type='email' className='input' placeholder="a" onChange={handleInputChange} name='email'/>
-                    <label className="label">Email</label>
-                </div>
+                <h1 className="title">Sign In</h1>
 
                 <div className="inputContainer">
                     <input type='text' className="input" placeholder="a" onChange={handleInputChange} name='username'/>
@@ -48,26 +42,21 @@ function Login() {
                     <label className="label">Password</label>
                  </div>
 
-                <div className="inputContainer">
-                    <input type="password" className="input" placeholder="a"/>
-                    <label className="label">Confirm Password</label>
-                </div>
-
                 <input type='submit' className="submitBtn" value="Sign up"/>
             </form>
         </div>
 
         <div className="mega-div">
             <button><motion.img 
-            animate={{ rotate: 40 }}
-            transition={{ 
-                duration: 0.4,
-                repeat : 10,
-                repeatType: "reverse" 
-            }}
-            
-
-            className='icon'  src={icD} /></button>
+                animate={{ rotate: 40 }}
+                transition={{ 
+                    duration: 0.4,
+                    repeat : 10,
+                    repeatType: "reverse" 
+                }}
+                
+                className='icon'  src={icD} />
+            </button>
             <img className='dude' alt='dude' src={dudeN} />
         </div>
 
