@@ -60,6 +60,12 @@ function Login() {
             <button><img className='icon' src={icD} /></button>
             <img className='dude' src={dudeN} />
         </div>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 48d22b1a447d40af07fc704e682ea2cafdd93d92
     </div>
     </>
   );
