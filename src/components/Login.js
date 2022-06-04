@@ -65,8 +65,6 @@ function Login() {
                 repeat : 10,
                 repeatType: "reverse" 
             }}
-            
-
             className='icon' src={icD} /></button>
             <img className='dude' src={dudeN} />
         </div>
