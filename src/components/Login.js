@@ -51,7 +51,7 @@ function Login() {
             </form>
 
             <div className='formR'>
-                 No account?, register here <a href='#'>Sign Up</a>
+                 No account?, <a href='#'>Sign Up here</a>
             </div>
         </div>
 
