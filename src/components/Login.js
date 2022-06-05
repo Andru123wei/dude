@@ -9,6 +9,7 @@ import ReactHowler from 'react-howler'
 function Login() {
 
     const [value, setValue] = useState({
+        email: '',
         username: '',
         password: '',
     });
@@ -21,21 +22,25 @@ function Login() {
             [e.target.name] : e.target.value
         });
         console.log(value);
-    };
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(`enviando datos... ${value.username}, ${value.password}`)
-    };
+        console.log(`enviando datos... ${value.email}, ${value.username}, ${value.password}`)
+    }
 
   return (
     <>
-    
     <div className='ultra-div'>
-   
+
         <div className="signupFrm">
             <form className="form" onSubmit={handleSubmit}>
-                <h1 className="title">Sign In</h1>
+                <h1 className="title">Sign up</h1>
+
+                <div className="inputContainer">
+                    <input type='email' className='input' placeholder="a" onChange={handleInputChange} name='email'/>
+                    <label className="label">Email</label>
+                </div>
 
                 <div className="inputContainer">
                     <input type='text' className="input" placeholder="a" onChange={handleInputChange} name='username'/>
