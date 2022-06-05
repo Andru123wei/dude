@@ -47,8 +47,12 @@ function Login() {
                     <label className="label">Password</label>
                  </div>
 
-                <input type='submit' className="submitBtn" value="Sign up"/>
+                <input type='submit' className="submitBtn" value="Sign In"/>
             </form>
+
+            <div className='formR'>
+                 No account?, register here <a href='#'>Sign Up</a>
+            </div>
         </div>
 
         <div className="mega-div">
