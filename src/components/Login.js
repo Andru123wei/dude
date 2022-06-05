@@ -2,7 +2,9 @@ import { useState } from 'react';
 import dudeN from '../images/dudeN.png';
 import icD from '../images/icon.png';
 import '../styles/login.css';
+import sonidoencima from'../assets/sounds/chiflido.mp3'
 import { motion } from 'framer-motion'
+import ReactHowler from 'react-howler'
 
 function Login() {
 
@@ -10,6 +12,8 @@ function Login() {
         username: '',
         password: '',
     });
+
+    const [dudu,setDudu] = useState(false);
 
     const handleInputChange = (e) => {
         setValue({
@@ -26,8 +30,9 @@ function Login() {
 
   return (
     <>
+    
     <div className='ultra-div'>
-
+   
         <div className="signupFrm">
             <form className="form" onSubmit={handleSubmit}>
                 <h1 className="title">Sign In</h1>
@@ -47,7 +52,8 @@ function Login() {
         </div>
 
         <div className="mega-div">
-            <button><motion.img 
+       
+            <button onClick={()=>setDudu(true)}><motion.img 
                 animate={{ rotate: 40 }}
                 transition={{ 
                     duration: 0.4,
@@ -56,6 +62,13 @@ function Login() {
                 }}
                 
                 className='icon'  src={icD} />
+                 <ReactHowler
+                    src={sonidoencima}
+                    playing={dudu}
+                    volume={0.3}
+                    onEnd={()=>setDudu(false)}
+                 />
+               
             </button>
             <img className='dude' alt='dude' src={dudeN} />
         </div>
