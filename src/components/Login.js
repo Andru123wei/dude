@@ -21,12 +21,12 @@ function Login() {
             [e.target.name] : e.target.value
         });
         console.log(value);
-    }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(`enviando datos... ${value.username}, ${value.password}`)
-    }
+    };
 
   return (
     <>
@@ -51,7 +51,7 @@ function Login() {
             </form>
 
             <div className='formR'>
-                 No account?, <a href='#'>Sign Up here</a>
+                No account?, <a href='#'>Sign Up here</a>
             </div>
         </div>
 
