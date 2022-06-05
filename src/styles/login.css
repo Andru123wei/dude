@@ -50,6 +50,7 @@
   
   .signupFrm {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -64,6 +65,16 @@
     background-color: white;
     width: 300px;
     border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+  }
+
+  .formR {
+    text-align: center;
+    background-color: white;
+    width: 300px;
+    border-radius: 8px;
+    margin-top: 20px;
     padding: 20px 40px;
     box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
   }
