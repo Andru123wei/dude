@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import dudeN from '../images/dudeN.png';
 import icD from '../images/icon.png';
 import '../styles/login.css';
@@ -30,54 +30,49 @@ function Login() {
 
   return (
     <>
-    
-    <div className='ultra-div'>
-   
         <div className="signupFrm">
-            <form className="form" onSubmit={handleSubmit}>
-                <h1 className="title">Sign In</h1>
+                      <form className="form" onSubmit={handleSubmit}>
+                          <h1 className="title">Sign In</h1>
 
-                <div className="inputContainer">
-                    <input type='text' className="input" placeholder="a" onChange={handleInputChange} name='username'/>
-                    <label className="label">Username</label>
-                </div>
+                          <div className="inputContainer">
+                              <input type='text' className="input" placeholder="a" onChange={handleInputChange} name='username' />
+                              <label className="label">Username</label>
+                          </div>
 
-                <div className="inputContainer">
-                    <input type='password' className="input" placeholder="a" onChange={handleInputChange} name='password'/>
-                    <label className="label">Password</label>
-                 </div>
+                          <div className="inputContainer">
+                              <input type='password' className="input" placeholder="a" onChange={handleInputChange} name='password' />
+                              <label className="label">Password</label>
+                          </div>
 
-                <input type='submit' className="submitBtn" value="Sign In"/>
-            </form>
+                          <input type='submit' onClick={handleSubmitLog} className="submitBtn" value="Sign In" />
+                      </form>
 
-            <div className='formR'>
-                 No account?, <a href='#'>Sign Up here</a>
-            </div>
-        </div>
+                      <div className='formR'>
+                          No account?, <a href='#'>Sign Up here</a>
+                      </div>
+                  </div><div className="mega-div">
 
-        <div className="mega-div">
-       
-            <button onClick={()=>setDudu(true)}><motion.img 
-                animate={{ rotate: 40 }}
-                transition={{ 
-                    duration: 0.4,
-                    repeat : 10,
-                    repeatType: "reverse" 
-                }}
-                
-                className='icon'  src={icD} />
-                 <ReactHowler
-                    src={sonidoencima}
-                    playing={dudu}
-                    volume={0.3}
-                    onEnd={()=>setDudu(false)}
-                 />
-               
-            </button>
-            <img className='dude' alt='dude' src={dudeN} />
-        </div>
-    </div>
-    </>
+                          <button onClick={() => setDudu(true)}><motion.img
+                              animate={{ rotate: 40 }}
+                              transition={{
+                                  duration: 0.4,
+                                  repeat: 10,
+                                  repeatType: "reverse"
+                              }}
+
+                              className='icon' src={icD} />
+                              <ReactHowler
+                                  src={sonidoencima}
+                                  playing={dudu}
+                                  volume={0.3}
+                                  onEnd={() => setDudu(false)} />
+
+                          </button>
+                          <img className='dude' alt='dude' src={dudeN} />
+                      </div>
+   </>
+        
+  </div>
   );
 }
 
