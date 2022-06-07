@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import dudeN from '../images/dudeN.png';
 import icD from '../images/icon.png';
 import '../styles/login.css';
-import sonidoencima from'../assets/sounds/triston.mp3'
-import { motion } from 'framer-motion'
-import ReactHowler from 'react-howler'
+import sonidoencima from'../assets/sounds/triston.mp3';
+import { motion } from 'framer-motion';
+import ReactHowler from 'react-howler';
 
 function Login() {
 
@@ -58,12 +58,13 @@ function Login() {
         <div className="mega-div">
        
             <button onClick={()=>setDudu(true)}><motion.img 
-                animate={{ rotate: 40 }}
+                animate={{rotate: 40} }
                 transition={{ 
                     duration: 0.4,
                     repeat : 10,
                     repeatType: "reverse" 
                 }}
+                
                 
                 className='icon'  src={icD} />
                  <ReactHowler

@@ -1,0 +1,25 @@
+.header{
+    background-color: #f7b731;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 56px;
+}
+
+.header input{
+    margin-left: 20px;
+}
+
+.header img{
+    height: 64px;
+    width: 84px;
+}
+
+.header button{
+    background-color: transparent;
+    border: none;
+    height: 64px;
+    width: 84px;
+    padding: 0px;
+}
