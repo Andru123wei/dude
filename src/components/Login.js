@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import dudeN from '../images/dudeN.png';
 import icD from '../images/icon.png';
 import '../styles/login.css';
@@ -44,7 +44,7 @@ function Login() {
                         <label className="label">Password</label>
                     </div>
 
-                    <input type='submit' onClick={handleSubmitLog} className="submitBtn" value="Sign In" />
+                    <input type='submit' className="submitBtn" value="Sign In" />
                 </form>
 
                 <div className='formR'>
