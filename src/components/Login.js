@@ -9,7 +9,6 @@ import ReactHowler from 'react-howler'
 function Login() {
 
     const [value, setValue] = useState({
-        email: '',
         username: '',
         password: '',
     });
