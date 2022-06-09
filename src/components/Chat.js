@@ -3,7 +3,7 @@ import Header from "../components/homeComponents/Header";
 import "../styles/chat.css";
 import io from "socket.io-client";
 import Picker from "emoji-picker-react";
-import Noticias from "./homeComponents/Noticias";
+
 const socket = io("http://localhost:5000");
 
 function Chat() {
