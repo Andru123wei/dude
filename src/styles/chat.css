@@ -6,19 +6,15 @@
   --border-color: #fff29c;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: black;
-}
-
 .bbody {
-  font-family: Roboto;
   color: #fff;
   height: 100vh;
   background: var(--background-color);
   overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
 }
 ul {
   list-style: none;

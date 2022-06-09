@@ -4,7 +4,7 @@
     font-size: 200px;
   }
   
-  body{
+  .bo{
     display: flex;
     background: #f7b731;
     
@@ -13,7 +13,7 @@
     align-items: center;
   }
   
-  .ultra-div{
+  .ultraa-div{
     height: 100vh;
     width: 100%;
     display: flex;

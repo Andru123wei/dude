@@ -7,10 +7,10 @@ import '../stylesHome/header.css';
 
 const Header = () => {
   return (
-    <header className='header'>
-        <input type='text' className="input" placeholder="Buscar" />
+    <header className='cabeza'>
+        <input type='text' className="inputa" placeholder="Buscar" />
 
-        <div className='title'>
+        <div className='titledude'>
           <label>DUDE</label>
         </div>
         <Navbar>

@@ -1,4 +1,4 @@
-.header{
+.cabeza{
     background-color: #0F1E29;
     display: flex;
     justify-content: space-between;
@@ -6,14 +6,14 @@
     height: 70px;
 }
 
-.header input{
+.cabeza input{
     margin-left: 25px;
     font-size: large;
     width: 250px;
     
 }
 
-.header button{
+.cabeza button{
     background-color: transparent;
     border: none;
     height: 64px;
@@ -21,7 +21,7 @@
     padding: 0px;
 }
 
-.title{
+.titledude{
     width: 200px;
     font-weight:bolder;
     font-size:3.5em;

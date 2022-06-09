@@ -32,7 +32,7 @@ function Login() {
     e.preventDefault();
     users.map((item) => {
       if (value.username === item.user && value.password === item.pass) {
-        navigate("/chat"); //redireccionando a el chat
+        navigate("/home"); //redireccionando a el chat
         console.log(`usuario ${item.user} verificado`);
       }
     });
@@ -41,8 +41,8 @@ function Login() {
   };
 
   return (
-    <>
-      <div className="ultra-div">
+    <div className="bo">
+      <div className="ultraa-div">
         <div className="signupFrm">
           <form className="form" onSubmit={handleSubmit}>
             <h1 className="title">Sign In</h1>
@@ -99,7 +99,7 @@ function Login() {
           <img className="dude" alt="dude" src={dudeN} />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
