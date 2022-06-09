@@ -2,11 +2,7 @@ import React, {useState} from 'react'
 import {ReactComponent as CogIcon} from '../../icons/cog.svg';
 import {ReactComponent as SalIcon} from '../../icons/singout.svg';
 import {ReactComponent as CaretIcon} from '../../icons/caret.svg';
-<<<<<<< HEAD
-
-=======
 import {ReactComponent as ChatIcon} from '../../icons/chat.svg';
->>>>>>> 146721eb43ff3e97ecfa3c93983f4ffc20f33638
 import '../stylesHome/header.css';
 
 const Header = () => {
