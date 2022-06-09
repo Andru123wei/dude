@@ -5,14 +5,12 @@ import sonidoencima from "../assets/sounds/triston.mp3";
 import { motion } from "framer-motion";
 import ReactHowler from "react-howler";
 import { useNavigate } from "react-router-dom";
+import users from "../data/users";
 
 import "../styles/login.css";
 
 function Login() {
-  const user1 = {
-    user: "uwu123",
-    pass: "123456",
-  };
+
   const [value, setValue] = useState({
     username: "",
     password: "",
@@ -27,16 +25,17 @@ function Login() {
       ...value,
       [e.target.name]: e.target.value,
     });
-    console.log(value);
+    //console.log(value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (value.username === user1.user && value.password === user1.pass) {
-      navigate("/chat"); //redireccionando a el chat
-    } else {
-      alert("Datos incorrectos!!");
-    }
+    users.map((item) => {
+      if (value.username === item.user && value.password === item.pass) {
+        navigate("/chat"); //redireccionando a el chat
+        console.log(`usuario ${item.user} verificado`);
+      }
+    });
 
     console.log(`enviando datos... ${value.username}, ${value.password}`);
   };

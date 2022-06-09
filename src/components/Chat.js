@@ -4,7 +4,7 @@ import io from "socket.io-client";
 import Picker from "emoji-picker-react";
 const socket = io("http://localhost:5000");
 
-function App() {
+function Chat() {
   const [socketId, setSocketId] = useState("");
   const [message, setMessage] = useState("");
   const [users, setUsers] = useState([]);
@@ -202,4 +202,4 @@ function App() {
   );
 }
 
-export default App;
+export default Chat;

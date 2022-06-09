@@ -1,8 +1,8 @@
-import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Chat from './components/Chat';
 import Login from './components/Login';
 import  NotFoundPage  from './components/NotFoundPage';
-import  Navbar from './components/Navegation';
+//import  Navbar from './components/Navegation';
 
 import './App.css';
 
