@@ -1,14 +1,23 @@
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import Chat from './components/Chat';
+import Login from './pages/Login';
+import  NotFoundPage  from './pages/NotFoundPage';
+//import  Navbar from './components/Navegation';
 
-// import Login from './pages/Login';
 import './App.css';
-import Home from './pages/Home';
+
 
 function App() {
   return (
-    <>   
-      {/* <Login/> */}
-     <Home/>
-    </>
+    <BrowserRouter>
+
+
+      <Routes>
+        <Route path='/' element={<Login/>} />
+        <Route path='/chat' element={<Chat/>} />
+        <Route path='*' element={<NotFoundPage/>} />
+      </Routes>    
+    </BrowserRouter>
   );
 }
 
