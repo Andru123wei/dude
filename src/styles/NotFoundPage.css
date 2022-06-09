@@ -1,0 +1,13 @@
+.div-pnf{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7b731;
+}
+
+.pnf{
+    width: 700px;
+    border-radius: 28%;
+}

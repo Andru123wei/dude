@@ -73,19 +73,6 @@ ul {
   text-align: center;
 }
 
-/* Scroll */
-
-::-webkit-scrollbar {
-  height: 8px;
-  width: 8px;
-  color: var(--primary-color);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
-  border-radius: 5px;
-}
-
 /* Chat */
 
 .chat-container {
