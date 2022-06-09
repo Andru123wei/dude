@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
+import Header from "../components/homeComponents/Header";
 import "../styles/chat.css";
 import io from "socket.io-client";
 import Picker from "emoji-picker-react";
+import Noticias from "./homeComponents/Noticias";
 const socket = io("http://localhost:5000");
 
 function Chat() {
@@ -94,110 +96,119 @@ function Chat() {
 
   return (
     <div className="bbody">
-      <h1 className="main_heading">Dude App</h1>
-      <h1 className="my_socket">Me: {socketId}</h1>
-      <h3 className="roomjoined">
-        {joinedRoom === true
-          ? `Room: ${room}`
-          : "You are not joined in any room"}
-      </h3>
+      <Header />
+     
 
-      {!joinedRoom && (
-        <div className="container">
-          <div className="users-container">
-            <h2 className="users_heading">Online Users:</h2>
-            <ul className="users">
-              {users.map((user) => {
-                return (
-                  <li className="user" key={user}>
-                    {user && user === socketId ? `*ME*` : user}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-          <div className="rooms-container">
-            <h2 className="rooms_heading">Available Rooms:</h2>
+        <div className="profile">
+          <h1 className="my_socket">Me: {socketId}</h1>
+          <h3 className="roomjoined">
+            {joinedRoom === true
+              ? `Room: ${room}`
+              : "You are not joined in any room"}
+          </h3>
+        </div>
+        
 
-            {rooms.length === 0 ? (
-              <h3 className="no_rooms">No Rooms! Create a room !</h3>
-            ) : (
-              <ul className="rooms">
-                {rooms.map((room) => {
+        {!joinedRoom && (
+          <div className="container">
+            <div className="users-container">
+              <h2 className="users_heading">Online Users:</h2>
+              <ul className="users">
+                {users.map((user) => {
                   return (
-                    <li key={room.id} onClick={() => joinRoom(room)}>
-                      {room.id}
+                    <li className="user" key={user}>
+                      {user && user === socketId ? `*ME*` : user}
                     </li>
                   );
                 })}
               </ul>
-            )}
-            <div className="btn-container">
-              <button className="btn" onClick={() => createRoom()}>
-                Create Room
-              </button>
+            </div>
+            <div className="rooms-container">
+              <h2 className="rooms_heading">Available Rooms:</h2>
+
+              {rooms.length === 0 ? (
+                <h3 className="no_rooms">No Rooms! Create a room !</h3>
+              ) : (
+                <ul className="rooms">
+                  {rooms.map((room) => {
+                    return (
+                      <li key={room.id} onClick={() => joinRoom(room)}>
+                        {room.id}
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+              <div className="btn-container">
+                <button className="btn" onClick={() => createRoom()}>
+                  Create Room
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {joinedRoom && (
-        <>
-          <div className="chat-container">
-            <ul className="chat-list" id="chat-list" ref={chatContainer}>
-              {chat.map((chat, idx) => (
-                <li
-                  key={idx}
-                  className={chat.writer === socketId ? "chat-me" : "chat-user"}
-                >
-                  {chat.writer === socketId
-                    ? `${chat.message}: ME*`
-                    : `User (${chat.writer.slice(0, 5)}): ${chat.message}`}
-                </li>
-              ))}
-            </ul>
-          </div>
+        {joinedRoom && (
+          <>
+            <div className="chat-container">
+              <ul className="chat-list" id="chat-list" ref={chatContainer}>
+                {chat.map((chat, idx) => (
+                  <li
+                    key={idx}
+                    className={
+                      chat.writer === socketId ? "chat-me" : "chat-user"
+                    }
+                  >
+                    {chat.writer === socketId
+                      ? `${chat.message}: ME*`
+                      : `User (${chat.writer.slice(0, 5)}): ${chat.message}`}
+                  </li>
+                ))}
+              </ul>
+              
+            </div>
+            <button type="button" onClick={() => setJoinedRoom(false)} className="btnB">Go back</button>
 
-          <form className="chat-form" onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="text"
-              placeholder="Your message ..."
-              autoFocus
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
-              value={message}
-            />
+            <form className="chat-form" onSubmit={(e) => e.preventDefault()}>
+              <input
+                type="text"
+                placeholder="Your message ..."
+                autoFocus
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                }}
+                value={message}
+              />
 
-            <button
-              className="emoji_btn"
-              type="button"
-              onClick={() => setShowEmoji(!showEmoji)}
-            >
-              Emoji
-            </button>
-            <button
-              className="send_btn"
-              type="submit"
-              onClick={() => sendMessage()}
-            >
-              Send
-            </button>
-          </form>
-          {showEmoji && (
-            <Picker
-              onEmojiClick={onEmojiClick}
-              pickerStyle={{
-                width: "20%",
-                display: "absolute",
-                left: "0",
-                bottom: "270px",
-                backgroundColor: "#fff",
-              }}
-            />
-          )}
-        </>
-      )}
+              <button
+                className="emoji_btn"
+                type="button"
+                onClick={() => setShowEmoji(!showEmoji)}
+              >
+                Emoji
+              </button>
+              <button
+                className="send_btn"
+                type="submit"
+                onClick={() => sendMessage()}
+              >
+                Send
+              </button>
+            </form>
+            {showEmoji && (
+              <Picker
+                onEmojiClick={onEmojiClick}
+                pickerStyle={{
+                  width: "20%",
+                  display: "absolute",
+                  left: "0",
+                  bottom: "270px",
+                  backgroundColor: "#fff",
+                }}
+              />
+            )}
+          </>
+        )}
     </div>
   );
 }

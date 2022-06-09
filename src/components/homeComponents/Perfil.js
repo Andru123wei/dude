@@ -4,7 +4,9 @@ import '../stylesHome/perfil.css';
 const Perfil = () => {
   return (
     <div className='perfil'>
-          <label>perfil</label>
+          
+         perfil
+
         </div>
   )
 }

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {ReactComponent as CogIcon} from '../../icons/cog.svg';
 import {ReactComponent as SalIcon} from '../../icons/singout.svg';
 import {ReactComponent as CaretIcon} from '../../icons/caret.svg';
-import {ReactComponent as home} from '../../images/iconHome.png';
+
 import '../stylesHome/header.css';
 
 const Header = () => {
