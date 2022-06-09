@@ -2,7 +2,11 @@ import React, {useState} from 'react'
 import {ReactComponent as CogIcon} from '../../icons/cog.svg';
 import {ReactComponent as SalIcon} from '../../icons/singout.svg';
 import {ReactComponent as CaretIcon} from '../../icons/caret.svg';
-import {ReactComponent as home} from '../../images/iconHome.png';
+<<<<<<< HEAD
+
+=======
+import {ReactComponent as ChatIcon} from '../../icons/chat.svg';
+>>>>>>> 146721eb43ff3e97ecfa3c93983f4ffc20f33638
 import '../stylesHome/header.css';
 
 const Header = () => {
@@ -13,13 +17,15 @@ const Header = () => {
         <div className='titledude'>
           <label>DUDE</label>
         </div>
-        <Navbar>
-          <NavItem icon={<CaretIcon />}>
+          <Navbar>
+            <NavItem icon={<ChatIcon />}/>
+          
+              <NavItem icon={<CaretIcon />}>
 
-          <Dropdownmenu/>
+                <Dropdownmenu/>
 
-          </NavItem>
-        </Navbar>
+                </NavItem>
+         </Navbar>
 
       </header>
     
@@ -55,7 +61,7 @@ function Dropdownmenu(){
 function Navbar(props){
   return(
     <nav className='navbar'>
-        <ul className='navbar-bar'>{props.children}</ul>
+        <ul className='navbar-bar'>{ props.children }</ul>
         </nav>
   );
 }

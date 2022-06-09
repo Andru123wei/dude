@@ -30,12 +30,14 @@
 } 
 
 .navbar{
-    height:  var(--nav-size);
-    background-color: var(--bg);
+    height:  var(60px);
     padding: 0 1rem;
-    border-bottom: var(--border);
+    border-bottom: var(1px);
     
    
+}
+.navbar-bar{
+    display: flex;
 }
 .navbar-nav{
     max-width: 100%;
@@ -45,25 +47,25 @@
     
 }
 .nav-item{
-    width: calc(var(--nav-size) * 0.8);
+    width: calc(60px * 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
+    margin: 5px;
 }
+
 .icon-button{
-    --button-size: calc(var(--nav-size) * 0.5);
-    width: 20px;
-    height: 20px;
+    --button-size: calc(60px * 0.5);
+    width: var(--button-size);
+    height: var(--button-size);
     background-color: #f7b731;
     border-radius: 50%;
     padding: 5px;
     margin: 2px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    transition: filter 300ms;
-    text-decoration: none;
+    
 }
 
 .icon-button:hover{
@@ -71,7 +73,7 @@
 }
 
 .icon-button svg{
-    fill: var(--text-color);
+    fill: black;
     width: 20px;
     height: 20px;
 }
@@ -84,7 +86,7 @@
     width: 100px;
     transform: translateX(-45%);
     background-color:white;
-    border: var(--border);
+    border: 1px;
     border-radius: 10px;
     padding: 1rem;
     overflow: hidden;
@@ -97,8 +99,8 @@
   display: flex;
   text-decoration: none;
   align-items: center;  
-  border-radius: var(--border-radius);
-  transition: background var(--speed);
+  border-radius: 8px;
+  transition: background var(500ms);
   padding: 0.5rem;
   margin-right: 0.5rem;
 }

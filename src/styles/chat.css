@@ -8,13 +8,14 @@
 
 .bbody {
   color: #fff;
-  height: 100vh;
+  height: 100%;
   background: var(--background-color);
   overflow-y: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: black;
+  text-align: right;
 }
 ul {
   list-style: none;
@@ -31,7 +32,7 @@ ul {
   margin: 2rem;
   padding: 2.1rem;
   width: 500px;
-  height: 65vh;
+  height: 55vh;
   /*  */
   background: rgba(255, 255, 255, 0.46);
   border-radius: 16px;
@@ -79,7 +80,7 @@ ul {
   display: flex;
   flex-direction: column;
   width: 60vw;
-  height: 60vh;
+  height: 57vh;
   background-color: inherit;
   /* border-radius: 1rem; */
   margin: 1rem auto;
@@ -175,6 +176,16 @@ ul {
   font-family: inherit;
   transition: 0.3s;
   background: rgb(222, 220, 220);
+  cursor: pointer;
+}
+.btnB{
+  margin-right: 130px;
+  font-size: 25px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #0F1E29;
+  color: #fff;
 }
 
 .btn-container {
@@ -205,6 +216,7 @@ ul {
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   display: block;
+  cursor: pointer;
 }
 
 .send_btn {
