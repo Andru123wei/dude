@@ -9,7 +9,7 @@ import users from "../data/users";
 
 import "../styles/login.css";
 
-function Login() {
+const Login = () => {
 
   const [value, setValue] = useState({
     username: "",
@@ -32,7 +32,7 @@ function Login() {
     e.preventDefault();
     users.map((item) => {
       if (value.username === item.user && value.password === item.pass) {
-        navigate("/chat"); //redireccionando a el chat
+        navigate("/home"); //redireccionando a el chat
         console.log(`usuario ${item.user} verificado`);
       }
     });

@@ -1,12 +1,13 @@
-import React from 'react'
-import '../stylesHome/noticias.css';
+import React from "react";
+import "../stylesHome/noticias.css";
+
 
 const Noticias = () => {
   return (
-    <div className='noticias'>
-          <label>noticias</label>
-        </div>
-  )
-}
+    <div className="noticias">
+      
+    </div>
+  );
+};
 
-export default Noticias
+export default Noticias;
