@@ -31,4 +31,4 @@ const Noticias = () => {
   )
 }
 
-export default Noticias
+export default Noticias;

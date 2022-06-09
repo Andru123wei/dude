@@ -9,7 +9,7 @@ import users from "../data/users";
 
 import "../styles/login.css";
 
-function Login() {
+const Login = () => {
 
   const [value, setValue] = useState({
     username: "",

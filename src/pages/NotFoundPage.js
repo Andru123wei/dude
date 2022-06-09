@@ -5,7 +5,7 @@ import '../styles/NotFoundPage.css'
 const NotFoundPage = () => {
   return (
     <div className='div-pnf'>
-      <img className='pnf' src={pnf} />
+      <img className='pnf' alt='not-found' src={pnf} />
     </div>
   );
 };
