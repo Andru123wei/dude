@@ -1,7 +1,7 @@
 
-// import Login from './components/Login';
+// import Login from './pages/Login';
 import './App.css';
-import Home from './components/Home';
+import Home from './pages/Home';
 
 function App() {
   return (

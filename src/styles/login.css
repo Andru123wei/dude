@@ -7,9 +7,7 @@
   body{
     display: flex;
     background: #f7b731;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Public Sans', sans-serif;
-    font-family: 'Shadows Into Light', cursive;
+    
     flex-direction: row;
     justify-content: center;
     align-items: center;

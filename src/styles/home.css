@@ -1,25 +1,39 @@
-.header{
-    background-color: #f7b731;
+.ultra.div{
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    overflow-y: hidden;
+    background: #f7b731;
+}
+
+.items{
+    display: grid;
+    background: #f7b731;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 2fr 3fr;
+    grid-gap: 10px 50px;
+    height: 100vh;
+    padding: 10px;
+   
+}
+
+.chat{
+    background:#0F1E29;
+    grid-row: 2;
+    justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 56px;
+   
+}
+ 
+.grupos{
+    background: #0F1E29;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+   
 }
 
-.header input{
-    margin-left: 20px;
-}
-
-.header img{
-    height: 64px;
-    width: 84px;
-}
-
-.header button{
-    background-color: transparent;
-    border: none;
-    height: 64px;
-    width: 84px;
-    padding: 0px;
+.conec{
+    background: #0F1E29; 
+    grid-column: 4;   
+   
 }
