@@ -13,6 +13,7 @@
     grid-gap: 10px 50px;
     height: 100%;
     padding: 10px;
+    
    
 }
 
@@ -36,4 +37,8 @@
     background: #0F1E29; 
     grid-column: 4;   
    
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
