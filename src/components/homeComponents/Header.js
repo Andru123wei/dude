@@ -8,7 +8,7 @@ import '../stylesHome/header.css';
 const Header = () => {
   return (
     <header className='cabeza'>
-        <input type='text' className="inputa" placeholder="Buscar" />
+        <input type='text' placeholder="Buscar" />
 
         <div className='titledude'>
           <label>DUDE</label>
